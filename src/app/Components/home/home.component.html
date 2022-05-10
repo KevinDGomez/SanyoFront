@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <h1>Holaaa Soy Home</h1>
+  <button (click)="GetAllProductos()" mat-fab color="primary" aria-label="example icon button with a search icon">
+  <mat-icon>search</mat-icon>
+  </button>
+  <div>
+    <table>
+      <tr>
+        <th>documento</th>
+        <th>nombre</th>
+        <th>apellidos</th>
+        <th>correo</th>
+        <th>direccion</th>
+     </tr>
+      <tr *ngFor="let item of listaUsuario">
+        <td>{{item.documento}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.correo}}</td>
+        <td>{{item.direccion}}</td>
+      </tr>
+      </table>
+
+  </div>
+
+
+
+  <!-- <button (click)="GetAllUsuarios()" mat-fab color="primary" aria-label="example icon button with a search icon"></button>
+  <mat-icon>search</mat-icon> -->
+</div>
+
