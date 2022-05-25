@@ -21,11 +21,10 @@ export class HomeComponent implements OnInit {
   //   console.log(usuarios);
   // }
 
-  GetAllProductos(){
+  GetAllUsuarios(){
     this.usuarios.GetAllUsuarios().subscribe(response=>{
       this.listaUsuario = response;
       console.log(response);
-
     });
   }
 

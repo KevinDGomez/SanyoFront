@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicia sesion</title>
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="container-login">
+    <form [formGroup]="MyForm" (submit)="CreateUser()">
+      <!-- <label for="Documento">Documento</label> -->
+      <mat-form-field class="example-full-width" appearance="fill">
+       <mat-label>Documento</mat-label>
+       <input type="text" matInput formControlName="Documento"  placeholder="ingrese su documento" id="documento">
+       <mat-error *ngIf="MyForm.hasError('required')">
+        El campo Documento es <strong>requerido</strong> </mat-error>
+      </mat-form-field>
+      <br>
+      <!-- <label for="nombre">Nombre</label> -->
+      <mat-form-field class="example-full-width" appearance="fill">
+       <mat-label>Nombre</mat-label>
+       <input type="text" matInput formControlName="Nombre" placeholder="ingrese su nombre" id="nombre">
+       <mat-error *ngIf="MyForm.hasError('required')">
+        El campo Nombre es <strong>requerido</strong> </mat-error>
+      </mat-form-field>
+      <br>
+      <!-- <label for="apellido">Apellido</label> -->
+      <mat-form-field class="example-full-width" appearance="fill">
+       <mat-label>Apellido</mat-label>
+       <input type="text" matInput formControlName="Apellido" placeholder="ingrese su apellido" id="documento">
+       <mat-error *ngIf="MyForm.hasError('required')">
+        El campo Apellido es <strong>requerido</strong> </mat-error>
+      </mat-form-field>
+      <br>
+      <!-- <label for="correo">Correo</label> -->
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input type="text" matInput formControlName="Correo" placeholder="ingrese su correo electronico" id="documento">
+        <mat-error *ngIf="MyForm.hasError('required')">
+         El campo Correo electronico es <strong>requerido</strong> </mat-error>
+      </mat-form-field>
+      <br>
+      <!-- <label for="contraseña">Contraseña</label> -->
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="Contraseña"  placeholder="Asigne una contraseña" id="documento">
+        <mat-error *ngIf="MyForm.hasError('required')">
+        El campo Contraseña es <strong>requerido</strong> </mat-error>
+      </mat-form-field>
+      <br>
+      <button mat-stroked-button color="primary" type="submit">Registrar</button>
+    </form>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,23 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserI } from '../Models/user.interface';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsuariosService {
-  url:string="https://localhost:44377/api/"
-  constructor(private http: HttpClient) { }
+  url: String="https://localhost:44374/api/"
+  constructor(public http: HttpClient) { }
 
   GetAllUsuarios() {
     return this.http.get(this.url+"Usuarios");
   }
 
-  // GetAllUsuarios() {
-  //   return this.http.get(this.url + 'Usuarios').subscribe((response) => {
-  //     console.log(response);
-  //   });
-  // }
-}
+  public CreateUser(Usuario : UserI){
+    this.http.post(this.url+"Usuarios",Usuario).subscribe(response =>{
+
+      console.log(response);
+
+    });
+    }
+
+  }
+
+
 
 
 

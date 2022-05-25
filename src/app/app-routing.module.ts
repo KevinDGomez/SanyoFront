@@ -6,7 +6,7 @@ import { ComprasComponent } from './Components/compras/compras.component';
 import { ContactenosComponent } from './Components/contactenos/contactenos.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { PedidosComponent } from './Components/pedidos/pedidos.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './Components/login/login.component';
 
 
 const routes: Routes = [

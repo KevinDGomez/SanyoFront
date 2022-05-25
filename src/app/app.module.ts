@@ -12,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
+
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,8 +25,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { HomeComponent } from './Components/home/home.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { MenuComponent } from './Components/menu/menu.component';
-import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import { MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +61,12 @@ import { LoginComponent } from './login/login.component';
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
